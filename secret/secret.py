@@ -1,0 +1,7 @@
+Twitter_API_Key = 'Pxse9jtL3poGghTKp5URQ0PDm'
+Twitter_API_Key_Secret = 'w6W1p5JIGbchmJmEadpjrGWRXiAUxT0FfeYghHbl78dGCy2OX0'
+Twitter_Bearer_Token = 'AAAAAAAAAAAAAAAAAAAAANGPbQEAAAAAMHqa3gyouwZk1khpNmmKt6yDHck%3DC7pIa7a7wDmmS624inTzdWfcwRrm0BVBXUt0eZeMRqnoMvqF6o'
+Twitter_Access_Token = '1513621706132410372-2GaFnY2eykOnv8clKAGHTwyDUwwdEJ'
+Twitter_Access_Token_Secret = 'siBtFDOOUOcqPXqOBxucqDl9uJsAR1xBZvnooIZ7ah1Sq'
+SPOTIPY_CLIENT_ID = '8fb75ec4712e4c5a86b3b6eb6d1cd28f'
+SPOTIPY_CLIENT_SECRET = '396d1b674d6040969bc3e788b3f150a1'
