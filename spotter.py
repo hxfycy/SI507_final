@@ -109,11 +109,27 @@ def request_query(url, params=None):
             save_cache(CACHE_DICT)
             return CACHE_DICT[cache_idx]
 
+def graph_bfs(G,node):
+    visited = []
+    queue = [] 
+    visited.append(node)
+    queue.append(node)
+
+    while queue:          # Creating loop to visit each node
+        m = queue.pop(0) 
+        print (m, end = " ") 
+
+    for neighbour in G[m]:
+      if neighbour not in visited:
+        visited.append(neighbour)
+        queue.append(neighbour)
+    return visited
 
 def main():
     # json_response = connect_to_endpoint(search_url, query_params)
     search_term = 'LaLaLand'
     json_response = get_tweet(search_term)
+    spotify_response = get_spotify(search_term)
     # print(json.dumps(json_response, indent=4, sort_keys=True))
 
 CACHE_DICT = open_cache()
