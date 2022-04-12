@@ -1,15 +1,12 @@
 from requests_oauthlib import OAuth1
 import requests
-import secrets
 from secret import secret
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import sqlite3
 import spotipy.util as util
 import os
 import json
 from flask import Flask, render_template, request
-import plotly.graph_objects as go
 
 # Secret var
 SPOT_ID = secret.SPOTIPY_CLIENT_ID
