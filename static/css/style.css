@@ -1,0 +1,92 @@
+body{
+    font-family: 'Sora', sans-serif;
+    font-size: 1vw;
+}
+#banner{
+    background-image: linear-gradient(to top,rgba(46, 26, 26, 0.85),rgba(106, 221, 165, 0.55),rgba(40, 218, 84, 0)),url("../imgs/wallpaper.png");
+    background-size: cover;
+    min-height: 80vh;
+    font-size: 150%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white
+    margin-bottom: 6px;
+}
+
+#banner h1{
+    width:75%;
+}
+
+#website_intro{
+    background-color: black;
+    color:white;
+    font-size: 2vw;
+    padding:10px;
+}
+
+#website_intro p{
+    width: 85%;
+    margin: 0 auto;
+}
+
+#song_recommend {
+    width: 90%;
+    margin:0 auto;
+    font-size: 2.2vw;
+    text-align: center;
+}
+
+#song_recommend h2{
+    font-size:3.2vw; 
+    margin:8px;  
+    font-weight: 500;
+}
+
+#song_recommend p{
+    margin:15px;
+    color: rgb(53, 53, 53);
+}
+
+#song_recommend input{
+    margin-left:9px;
+    margin-right: 3px;
+    
+}
+
+#trend{
+    width: 90%;
+    margin:0 auto;
+    font-size: 2.2vw;
+    text-align: center;
+    background-color: burlywood;
+}
+
+#trend h2{
+    font-size:3.2vw; 
+    margin:8px;  
+    font-weight: 500;
+}
+
+#trend p{
+    margin:15px;
+    color: rgb(53, 53, 53);
+}
+
+table{
+    text-align: center;
+    border: 5px solid black;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table th, table td{
+    text-align: center;
+    border-top: 2px solid black;
+    font-size: 0.5vw;
+    padding:4px;
+}
+
+
+

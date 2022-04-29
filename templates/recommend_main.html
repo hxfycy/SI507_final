@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/html5reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+    <title>Music Recommendation for you</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@600&family=Roboto:wght@300;400&family=Sora:wght@200;400&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="banner">
+        <h1>This is the Music Recommendation for you based on the Spotify & Twitter database </h1>
+    </div>
+    <div id="website_intro">
+        <p>Enter your favorite artist, and we will give you recommendation according to 
+            its popularity & rhythm and acousticness similarity.</p>
+    </div>
+    <div id="song_recommend">
+        <h2>
+            <!-- Choose your song preferences -->
+            Choose your favorite artist
+        </h2>
+        <form action="/recommend_result" method="POST">
+            <p>
+                Which artist & piece would you like to search? <input name="name" type="text"/><br/>
+            </p>
+            <p>
+                How would you like your results displayed? 
+                <select name="visualization">
+                    <option value="Recom">Recom for you</option>
+                    <option value="Top_song">Top rated song </option>
+                    <option value="Twi">current comments on twitter</option>
+                </select>
+            </p>
+        
+           <input type="submit" value="Get Recommendation"/>
+          </form>
+    </div>
+</body>
+
+</html>

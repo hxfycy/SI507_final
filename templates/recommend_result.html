@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/html5reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+	<title>Spotify Song Recommendation (Results)</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@600&family=Roboto:wght@300;400&family=Sora:wght@200;400&family=Source+Sans+Pro&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+    {% if result==[] %}
+    <h1> Sorry, there are no related records, check your input :(</h1>
+    <a href="/">Try other preferences</a>
+    {% else %}
+    <h1>Here are the recommended songs!</h1>
+    <table style="margin-top:30px; text-align: center; border: 2px solid black; margin: 0 auto; border-collapse: collapse;">
+        <tr>
+            <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Song Name</th>
+            <!-- <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Artist</th> -->
+            <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Popularity</th>
+            <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Tempo</th>
+            <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Valence</th>
+            <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Energy</th>
+            <th style="text-align: center; border-top: 2px solid black; font-size: 1.5vw; padding:2px; color: blue;">Danceability</th>
+        </tr>
+        {% for song in result %}
+        <tr>
+            <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["name"]}}</td>
+            <!-- <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["artist"]}}</td> -->
+            <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["popularity"]}}</td>
+            <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["tempo"]}}</td>
+            <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["valence"]}}</td>
+            <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["energy"]}}</td>
+            <td style="text-align: center; border-top: 2px solid black; font-size: 1.1vw; padding:2px;">{{result[song]["danceability"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/" style="margin-top: 20px; margin-bottom: 20px;">Back to try other recom</a>
+    {% endif %}
+
+</body>
+
+</html>
