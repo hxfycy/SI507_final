@@ -5,13 +5,13 @@ A flask-based recommendation system with the data fetched from the Spotify, acco
 spotipy, flask, plotly, requests
 
 # How to run: 
-Run the final_proj.py
+Run the final_proj.py  
 There're several interaction options: Get Top track of one artist, Get Recommendation of the artist, and check the recent twitter comments of one artist & track.
 
 # Routes:
-/-> index route
-/recommend_result -> recommend & top track results
-/twitter_res -> twitter comments
+/-> index route  
+/recommend_result -> recommend & top track results  
+/twitter_res -> twitter comments  
 
 # Data Source
 All the Data comes from Spotify and Twitter API, I also cached several datas in the "final.json" and one built graph in "graph.json"
